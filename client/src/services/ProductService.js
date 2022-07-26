@@ -1,6 +1,6 @@
 const baseURL = 'http://localhost:9000/api/products/'
 
-const ShopService = {
+const ProductService = {
     getProducts() {
         return fetch(baseURL)
             .then(res => res.json());
@@ -15,7 +15,24 @@ const ShopService = {
             }
         })
             .then(res => res.json());
+    },
+
+    addProduct(product) {
+        return fetch(baseURL, {
+          method: 'POST',
+          body: JSON.stringify(product),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+          .then(res => res.json());
+    },
+
+    deleteProduct(id) {
+        return fetch(baseURL + id, {
+          method: 'DELETE'
+        });
     }
 }
 
-export default ShopService;
+export default ProductService;
