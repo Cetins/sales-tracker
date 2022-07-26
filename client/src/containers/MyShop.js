@@ -5,7 +5,7 @@ import MainTitle from "../components/MainTitle";
 import ProductService from "../services/ProductService";
 import ServiceService from "../services/ServiceService";
 
-const HomeContainer = () => {
+const MyShop = () => {
     const [products, setProducts] = useState([]);
     const [services, setServices] = useState([]);
 
@@ -20,11 +20,10 @@ const HomeContainer = () => {
 
     return (
         <div className="home-container">
-            <MainTitle title="Welcome"/>
             <Products products={products}/>
             <Services services={services}/>
         </div>
     )
 }
 
-export default HomeContainer;
+export default MyShop;
