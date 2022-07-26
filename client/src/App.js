@@ -20,8 +20,8 @@ function App() {
           <Route exact path='/' element={<HomeContainer />} />
           <Route exact path='/sales' element={<SalesContainer />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }
