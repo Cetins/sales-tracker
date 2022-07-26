@@ -5,6 +5,7 @@ import "../styles/Menu.css"
 const Menu = () => {
     return (
         <div className="menu-div">
+            <h1>Sales Tracker</h1>
             <ul>
                 <li className='nav-links'>
                     <Link to="/">Home</Link>

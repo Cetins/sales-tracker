@@ -1,5 +1,31 @@
 .menu-div {
-    background-color: red;
-    /* position: fixed;
-    top: 0; */
+    background-color: var(--nav);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 1px 8px #ddd;
+}
+
+.menu-div>h1 {
+    margin-right: auto;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.nav-links>a {
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+.nav-links>a:hover {
+    color: var(--accent);
 }

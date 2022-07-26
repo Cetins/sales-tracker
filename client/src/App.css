@@ -1,4 +1,13 @@
+:root {
+  --background: #082032;
+  --nav: #2C394B;
+  --container: #334756;
+  --accent: #FF4C29;
+  --text: white;
+}
+
 .App {
   text-align: center;
   margin: 0;
+  color: var(--text);
 }

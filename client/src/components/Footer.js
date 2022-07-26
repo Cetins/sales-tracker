@@ -1,7 +1,8 @@
 import React from "react";
+import "../styles/Footer.css"
 
 const Footer = () => {
-    return <p>footer</p>
+    return <p id="footer">Developed by Cetins</p>
 }
 
 export default Footer;
