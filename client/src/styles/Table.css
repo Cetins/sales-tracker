@@ -1,0 +1,29 @@
+.styled-table {
+    border-collapse: collapse;
+    margin: 10px;
+    font-size: 1em;
+    font-family: sans-serif;
+    text-align: center;
+    min-width: 475px;
+    box-shadow: var(--shadow);
+}
+
+.styled-table thead tr {
+    background-color: var(--nav);
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    background-color: var(--row1);
+    color: var(--container);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: var(--row2);
+}
