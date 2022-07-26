@@ -1,13 +1,36 @@
 :root {
-  --background: #082032;
+  --background: #334756;
   --nav: #2C394B;
-  --container: #334756;
+  --container: #082032;
   --accent: #FF4C29;
   --text: white;
+  --shadow: 0 1px 8px rgb(0, 0, 0);
+}
+
+body {
+  background-color: var(--background);
 }
 
 .App {
   text-align: center;
   margin: 0;
   color: var(--text);
+}
+
+.main-title, .sub-title {
+  padding: 1em;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.parent-container {
+  background-color: var(--container);
+}
+
+.child-container {
+  background-color: var(--nav);
 }
