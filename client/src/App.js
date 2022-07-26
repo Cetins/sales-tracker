@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet, Link } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet} from "react-router-dom"
 import HomeContainer from './containers/HomeContainer';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
+import SalesContainer from './containers/SalesContainer';
 import './App.css';
 
 const PrivateRoute = () => {
@@ -17,7 +18,7 @@ function App() {
         <Menu />
         <Routes>
           <Route exact path='/' element={<HomeContainer />} />
-          {/* <Route exact path='/quiz' element={<QuizContainer />} /> */}
+          <Route exact path='/sales' element={<SalesContainer />} />
         </Routes>
       </Router>
       <Footer />
