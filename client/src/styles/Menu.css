@@ -3,8 +3,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px 50px;
-    box-shadow: 0 1px 8px #ddd;
+    padding: 1.5em 2em;
+    box-shadow: var(--shadow);
 }
 
 .menu-div>h1 {
@@ -15,7 +15,7 @@
 .nav-links {
     list-style: none;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 .2em;
     font-weight: 600;
     font-size: 1.2em;
 }
@@ -23,9 +23,13 @@
 .nav-links>a {
     text-decoration: none;
     transition: all 0.3s ease 0s;
-    color: white;
+    color: var(--text);
+    padding: 1em;
 }
 
 .nav-links>a:hover {
     color: var(--accent);
+    border: none;
+    border-radius: .1em;
+    box-shadow: var(--shadow);
 }
