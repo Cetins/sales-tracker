@@ -1,15 +1,13 @@
 import React from "react";
 import "../styles/Table.css"
 
-const ProductsTable = ({ products }) => {
-    const tableItems = products.map(item => {
+const ServicesTable = ({ services }) => {
+    const tableItems = services.map(item => {
         return (
             <tr key={item._id}>
                 <td>{item.title}</td>
-                <td>{item.manufacturer}</td>
+                <td>{item.duration}</td>
                 <td>£ {item.price}</td>
-                <td>£ {item.sale_price}</td>
-                <td>{item.stock}</td>
             </tr>
         )
     });
@@ -18,11 +16,9 @@ const ProductsTable = ({ products }) => {
             <table className="styled-table">
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Manufacturer</th>
+                        <th>Title</th>
+                        <th>Duration</th>
                         <th>Price</th>
-                        <th>Sale Price</th>
-                        <th>Stock</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,4 +28,4 @@ const ProductsTable = ({ products }) => {
     )
 }
 
-export default ProductsTable;
+export default ServicesTable;

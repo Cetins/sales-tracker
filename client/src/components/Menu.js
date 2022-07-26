@@ -13,6 +13,9 @@ const Menu = () => {
                 <li className='nav-links'>
                     <Link to="/sales">Sales</Link>
                 </li>
+                <li className='nav-links'>
+                    <Link to="/myshop">My Shop</Link>
+                </li>
             </ul>
         </div>
     )

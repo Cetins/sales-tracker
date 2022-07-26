@@ -1,3 +1,4 @@
 #footer {
-    color: red;
+    background-color: var(--nav);
+    padding: 1em;
 }

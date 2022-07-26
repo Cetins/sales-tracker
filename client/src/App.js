@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Outlet} from "react-router-dom"
-import HomeContainer from './containers/HomeContainer';
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet} from "react-router-dom";
+import Home from './containers/Home';
+import Sales from './containers/Sales';
+import MyShop from './containers/MyShop';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
-import SalesContainer from './containers/SalesContainer';
 import './App.css';
 
 const PrivateRoute = () => {
@@ -17,11 +18,12 @@ function App() {
       <Router>
         <Menu />
         <Routes>
-          <Route exact path='/' element={<HomeContainer />} />
-          <Route exact path='/sales' element={<SalesContainer />} />
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/myshop'element={<MyShop/>} />
+          <Route exact path='/sales' element={<Sales />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

@@ -7,7 +7,7 @@ const Products = ({ products }) => {
     const stockTitle = `Net Stock Worth is £ ${stockTotal}`
 
     return (
-        <div className="parent-container">
+        <div className="child-container">
             <SubTitle title="Products"/>
             <ProductsTable products={products} stockTotal={stockTotal}/>
             <SubTitle title={stockTitle}/>
