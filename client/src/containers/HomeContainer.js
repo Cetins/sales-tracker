@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Products from "../components/Products";
+import Services from "../components/Services";
 import MainTitle from "../components/MainTitle";
 import ProductService from "../services/ProductService";
 import ServiceService from "../services/ServiceService";
@@ -21,6 +22,7 @@ const HomeContainer = () => {
         <div className="home-container">
             <MainTitle title="Welcome"/>
             <Products products={products}/>
+            <Services services={services}/>
         </div>
     )
 }
