@@ -10,7 +10,35 @@ db.shop.insertMany([
 
 db.products.insertMany([
     {
-        title: "test product",
+        title: "test product1",
+        manufacturer: "company ltd",
+        price: 5,
+        sale_price: 10,
+        stock: 3
+    },
+    {
+        title: "test product2",
+        manufacturer: "company ltd",
+        price: 5,
+        sale_price: 10,
+        stock: 3
+    },
+    {
+        title: "test product3",
+        manufacturer: "company ltd",
+        price: 5,
+        sale_price: 10,
+        stock: 3
+    },
+    {
+        title: "test product4",
+        manufacturer: "company ltd",
+        price: 5,
+        sale_price: 10,
+        stock: 3
+    },
+    {
+        title: "test product5",
         manufacturer: "company ltd",
         price: 5,
         sale_price: 10,
