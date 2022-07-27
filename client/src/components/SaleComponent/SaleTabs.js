@@ -3,7 +3,7 @@ import '../../styles/Tabs.css';
 import ServiceSaleTab from "./ServiceSaleTab";
 import ProductSaleTab from "./ProductSaleTab";
 
-const Tabs = ({ services, staff}) => {
+const Tabs = ({ services, products, staff}) => {
   const [activeTab, setActiveTab] = useState("tab1");
 
   function handleTab1() {setActiveTab("tab1")};
@@ -16,7 +16,7 @@ const Tabs = ({ services, staff}) => {
         <li className={activeTab === "tab2" ? "active" : ""} onClick={handleTab2}>Product Sale</li>
       </ul>
       <div className="outlet">
-        {activeTab === "tab1" ? <ServiceSaleTab services={services} staff={staff}/> : <ProductSaleTab />}
+        {activeTab === "tab1" ? <ServiceSaleTab services={services} staff={staff} /> : <ProductSaleTab products={products} staff={staff} />}
       </div>
     </div>
   );

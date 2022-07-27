@@ -11,7 +11,7 @@ const ServiceSaleTab = ({ services, staff }) => {
         <div className="FirstTab">
             <form className="styled-form">
                 <div>
-                    <label>Title:</label>
+                    <label>Service:</label>
                     <SelectService services={services}/>
                 </div>
                 <div>
