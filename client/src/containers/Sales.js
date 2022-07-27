@@ -1,8 +1,17 @@
-import React from "react";
+import React , { useState, useEffect } from "react";
+import SalesService from '../services/SalesService';
+import SalesTable from '../components/SalesTable';
 
 const Sales = () => {
+    const [sales, setSales] = useState([]);
+
+    useEffect(() => {
+        SalesService.getSales()
+            .then(sales => setSales(sales));
+    }, []);
+
     return (
-        <h1>Sales</h1>
+        <SalesTable sales={sales}/>
     )
 }
 
