@@ -3,10 +3,12 @@ import SalesService from '../services/SalesService';
 import SalesTable from '../components/SalesTable';
 import SaleTabs from "../components/SaleComponent/SaleTabs";
 import ServiceService from "../services/ServiceService";
+import StaffService from '../services/StaffService';
 
 const Sales = () => {
     const [sales, setSales] = useState([]);
     const [services, setServices] = useState([]);
+    const [staff, setStaff] = useState([]);
 
     useEffect(() => {
         SalesService.getSales()
@@ -16,10 +18,14 @@ const Sales = () => {
         ServiceService.getServices()
             .then(services => setServices(services));
     }, []);
+    useEffect(() => {
+        StaffService.getStaff()
+            .then(staff => setStaff(staff));
+    }, []);
 
     return (
-        <div>
-            <SaleTabs services={services}/>
+        <div className="parent-container">
+            <SaleTabs services={services} staff={staff}/>
             <SalesTable sales={sales}/>
         </div>
     )

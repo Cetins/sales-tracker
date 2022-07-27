@@ -1,43 +1,41 @@
 .Tabs {
-    width: 80%;
+    width: auto;
     height: auto;
-    min-height: 400px;
+    /* min-height: 400px; */
     background: var(--container);
-    margin: 3.5rem auto 1.5rem;
-    padding: 2rem 1rem;
+    margin: 3.5em auto 1.5em;
+    padding: 2em 1em;
     @media (max-width: 769px) {
-        padding: 2rem 0;
+        padding: 2em 0;
     };
     box-shadow: var(--shadow);
 }
 
 ul.nav {
-    width: 60%;
-    margin: 0 auto 2rem;
+    margin: .5em auto 2em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 1px solid var(--nav);
-    border-radius: 2rem;
-    /* @media (max-width: 768px) {
-      width: 90%;
-    } */
+    border-radius: 2em;
   }
   
 ul.nav li {
     width: 50%;
-    padding: 1rem;
+    padding: 1em;
     list-style: none;
     text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.7s;
-    border-bottom-left-radius: 2rem;
-    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2em;
+    border-top-left-radius: 2em;
 }
 ul.nav li:nth-child(2) {
     border-radius: 0;
-    border-bottom-right-radius: 2rem;
-    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
 }
 ul.nav li:hover {
     background: var(--nav);
@@ -48,6 +46,6 @@ ul.nav li.active {
 
 .FirstTab p,
 .SecondTab p {
-    font-size: 2rem;
+    font-size: 2em;
     text-align: center;
 }

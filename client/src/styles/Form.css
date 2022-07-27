@@ -1,0 +1,37 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: var(--nav);
+    padding: 1.2em;
+}
+
+.styled-form>div>label {
+    display: inline-block;
+    font-size: 1.2em;
+    width: 6em;
+}
+
+.styled-form>div>select , .styled-form>div>input{
+    display: inline-block;
+    border: none;
+    width: 200px;
+    font-size: 1.2em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    margin: .2em;
+}
+
+.styled-form>input {
+    background-color: var(--accent);
+    border: none;
+    font-size: 1.2em;
+    color: var(--text);
+    margin: 1em;
+    padding: .2em;
+    font-size: 1.2em;
+}

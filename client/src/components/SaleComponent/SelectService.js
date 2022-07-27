@@ -6,7 +6,7 @@ const SelectService = ({ services }) => {
     })
     return (
         <select>
-            |{serviceOptions}
+            {serviceOptions}
         </select>
     )
 }

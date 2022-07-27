@@ -14,7 +14,7 @@ const Menu = () => {
                     <Link to="/sales">Sales</Link>
                 </li>
                 <li className='nav-links'>
-                    <Link to="/myshop">My Shop</Link>
+                    <Link to="/dashboard">Dashboard</Link>
                 </li>
             </ul>
         </div>
