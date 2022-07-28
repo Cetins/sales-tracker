@@ -11,7 +11,7 @@ const ProductSaleTab = ({ products, staff }) => {
           <form className="styled-form">
               <div>
                   <label>Product:</label>
-                  <SelectProduct services={products}/>
+                  <SelectProduct products={products}/>
               </div>
               <div>
                   <label>Staff:</label>

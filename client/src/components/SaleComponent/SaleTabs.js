@@ -12,8 +12,8 @@ const Tabs = ({ services, products, staff}) => {
   return (
     <div className="Tabs child-container">
       <ul className="nav">
-        <li className={activeTab === "tab1" ? "active" : ""} onClick={handleTab1}>Service Sale</li>
-        <li className={activeTab === "tab2" ? "active" : ""} onClick={handleTab2}>Product Sale</li>
+        <li key="service-tab" className={activeTab === "tab1" ? "active" : ""} onClick={handleTab1}>Service Sale</li>
+        <li key="product-tab" className={activeTab === "tab2" ? "active" : ""} onClick={handleTab2}>Product Sale</li>
       </ul>
       <div className="outlet">
         {activeTab === "tab1" ? <ServiceSaleTab services={services} staff={staff} /> : <ProductSaleTab products={products} staff={staff} />}
