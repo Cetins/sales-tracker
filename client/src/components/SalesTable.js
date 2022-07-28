@@ -15,20 +15,22 @@ const SalesTable = ({ sales }) => {
     });
 
     return (
-            <table className="styled-table">
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Title</th>
-                        <th>Payment</th>
-                        <th>Staff</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableItems}
-                </tbody>
-            </table>
+            <div className="child-container">
+                <table className="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Title</th>
+                            <th>Payment</th>
+                            <th>Staff</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tableItems}
+                    </tbody>
+                </table>
+            </div>
     )
 }
 

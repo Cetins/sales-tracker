@@ -5,7 +5,7 @@ import MainTitle from "../components/MainTitle";
 import ProductService from "../services/ProductService";
 import ServiceService from "../services/ServiceService";
 
-const MyShop = () => {
+const Dashboard = () => {
     const [products, setProducts] = useState([]);
     const [services, setServices] = useState([]);
 
@@ -19,11 +19,11 @@ const MyShop = () => {
     }, []);
 
     return (
-        <div className="home-container">
+        <div className="parent-container">
             <Products products={products}/>
             <Services services={services}/>
         </div>
     )
 }
 
-export default MyShop;
+export default Dashboard;

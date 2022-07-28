@@ -11,7 +11,7 @@ const Home = () => {
     }, []);
     
     return (
-        <div className="home-container">
+        <div className="parent-container">
             { shop.length > 0 ? <Welcome shop={shop[0]}/> : null}
         </div>
     )
