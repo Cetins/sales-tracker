@@ -3,8 +3,7 @@ import '../../styles/Tabs.css';
 import SelectProduct from './SelectProduct';
 import SelectStaff from "./SelectStaff";
 
-const ProductSaleTab = ({ products, staff }) => {
-  const date = new Date().toLocaleDateString();
+const ProductSaleTab = ({ products, staff, addSale}) => {
     
   return (
       <div className="SecondTab">
@@ -19,7 +18,7 @@ const ProductSaleTab = ({ products, staff }) => {
               </div>
               <div>
                   <label>Date:</label>
-                  <input type="date" defaultValue={date}/>
+                  <input type="date" />
               </div>
               <input type="submit" value="Submit Sale"/>
           </form>

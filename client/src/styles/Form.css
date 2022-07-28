@@ -8,6 +8,7 @@
     text-align: start;
     background-color: var(--nav);
     padding: 1.2em;
+    box-shadow: var(--shadow);
 }
 
 .styled-form>div>label {

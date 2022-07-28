@@ -12,6 +12,8 @@ const Sales = () => {
     const [products, setProducts] = useState([]);
     const [staff, setStaff] = useState([]);
 
+    useEffect(() => {}, [sales])
+
     useEffect(() => {
         SalesService.getSales()
             .then(sales => setSales(sales));
@@ -29,9 +31,13 @@ const Sales = () => {
             .then(staff => setStaff(staff));
     }, []);
 
+    const addSale = (sale) => {
+        SalesService.addSale(sale)
+    }
+
     return (
         <div className="parent-container">
-            <SaleTabs services={services} products={products} staff={staff}/>
+            <SaleTabs services={services} products={products} staff={staff} addSale={addSale}/>
             <SalesTable sales={sales}/>
         </div>
     )
