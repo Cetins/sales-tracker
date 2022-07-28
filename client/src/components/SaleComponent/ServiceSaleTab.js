@@ -3,6 +3,7 @@ import '../../styles/Tabs.css';
 import SelectService from "./SelectService";
 import SelectStaff from "./SelectStaff";
 import '../../styles/Form.css'
+import ServiceInfo from "./ServiceInfo";
 
 const ServiceSaleTab = ({ services, staff, addSale }) => {
     const [service, setService] = useState(services[0]);
@@ -40,7 +41,7 @@ const ServiceSaleTab = ({ services, staff, addSale }) => {
                 </div>
                 <input type="submit" value="Submit Sale"/>
             </form>
-            {service? <p>{service.title}</p> : null}
+            {service? <ServiceInfo service={service} /> : null}
         </div>
     );
 };
