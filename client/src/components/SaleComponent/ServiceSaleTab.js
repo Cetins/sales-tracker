@@ -5,14 +5,19 @@ import SelectStaff from "./SelectStaff";
 import '../../styles/Form.css'
 import ServiceInfo from "./ServiceInfo";
 
-const ServiceSaleTab = ({ services, staff, addSale }) => {
-    const [service, setService] = useState(services[0]);
-    const [staffMember, setStaffMember] = useState(staff[0]);
-    const [date, setDate] = useState();
+const ServiceSaleTab = ({ 
+    staff,
+    services,
+    staffMember,
+    service,
+    date,
+    addSale,
+    handleStaffMemberChange,
+    handleServiceChange,
+    handleDateChange
+    }) => {
 
-    const handleDateChange = (e) => {setDate(e.target.value)}
-
-    const handleSubmit = (e) => {
+    const handleServiceSaleSubmit = (e) => {
         e.preventDefault();
         addSale({
             category: "service",
@@ -21,19 +26,19 @@ const ServiceSaleTab = ({ services, staff, addSale }) => {
             staff: staffMember.name,
             date: date
         });
-        console.log("addSale")
+        console.log("add service sale")
     }
     
     return (
         <div className="FirstTab">
-            <form className="styled-form" onSubmit={handleSubmit}>
+            <form className="styled-form" onSubmit={handleServiceSaleSubmit}>
                 <div>
                     <label>Staff:</label>
-                    <SelectStaff staff={staff} setStaffMember={setStaffMember}/>
+                    <SelectStaff staff={staff} handleStaffMemberChange={handleStaffMemberChange} />
                 </div>
                 <div>
                     <label>Service:</label>
-                    <SelectService services={services} setService={setService}/>
+                    <SelectService services={services} handleServiceChange={handleServiceChange}/>
                 </div>
                 <div>
                     <label>Date:</label>
@@ -41,7 +46,9 @@ const ServiceSaleTab = ({ services, staff, addSale }) => {
                 </div>
                 <input type="submit" value="Submit Sale"/>
             </form>
-            {service? <ServiceInfo service={service} /> : null}
+            {service &&  (
+                <ServiceInfo service={service} />
+            )}
         </div>
     );
 };
