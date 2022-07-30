@@ -12,6 +12,7 @@ const Tabs = ({
   product,
   date,
   addSale,
+  updateStock,
   handleServiceChange,
   handleProductChange,
   handleStaffMemberChange,
@@ -47,6 +48,7 @@ const Tabs = ({
             product={product}
             date={date}
             addSale={addSale}
+            updateStock={updateStock}
             handleProductChange={handleProductChange}
             handleStaffMemberChange={handleStaffMemberChange}
             handleDateChange={handleDateChange} />}

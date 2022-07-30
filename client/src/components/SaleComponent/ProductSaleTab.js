@@ -2,6 +2,7 @@ import React from "react";
 import '../../styles/Tabs.css';
 import SelectProduct from './SelectProduct';
 import SelectStaff from "./SelectStaff";
+import ProductInfo from "./ProductInfo";
 
 const ProductSaleTab = ({ 
     staff,
@@ -10,6 +11,7 @@ const ProductSaleTab = ({
     product,
     date,
     addSale,
+    updateStock,
     handleProductChange,
     handleStaffMemberChange,
     handleDateChange }) => {
@@ -19,10 +21,12 @@ const ProductSaleTab = ({
         addSale({
             category: "product",
             title: product.title,
+            product_id: product._id,
             price: product.price,
             staff: staffMember.name,
             date: date
         });
+        updateStock(1)
         console.log("add product sale")
     }
     
@@ -43,6 +47,9 @@ const ProductSaleTab = ({
                 </div>
                 <input type="submit" value="Submit Sale"/>
             </form>
+            {product && (
+                <ProductInfo product={product} />
+            )}
         </div>
     );
 };

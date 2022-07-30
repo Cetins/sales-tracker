@@ -14,7 +14,7 @@ const Sales = () => {
     const [product, setProduct] = useState();
     const [staff, setStaff] = useState([]);
     const [staffMember, setStaffMember] = useState();
-    const [date, setDate] = useState();
+    const [date, setDate] = useState();    
 
     useEffect(() => {
         SalesService.getSales()
@@ -38,10 +38,16 @@ const Sales = () => {
     const handleStaffMemberChange = (e) => {setStaffMember(staff[e.target.value])}
     const handleDateChange = (e) => {setDate(e.target.value)}
 
+    const updateStock = (stockSold) => {
+        const newStock = product.stock - stockSold
+        ProductService.updateProduct({
+            stock: newStock})
+    }
+
     const addSale = (sale) => {
-        SalesService.addSale(sale) // add new sale to database
-        const updatedSales = [...sales, sale]  // make a copy of sales and add the new sale
-        setSales(updatedSales);   // update the sales
+        SalesService.addSale(sale);
+        const updatedSales = [...sales, sale]  
+        setSales(updatedSales);
     }
 
     return (
@@ -55,6 +61,7 @@ const Sales = () => {
                 product={product}
                 date={date}
                 addSale={addSale}
+                updateStock={updateStock}
                 handleServiceChange={handleServiceChange}
                 handleProductChange={handleProductChange}
                 handleStaffMemberChange={handleStaffMemberChange}
