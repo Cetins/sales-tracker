@@ -1,11 +1,14 @@
 import React from "react";
 
-const SelectProduct = ({ products }) => {
-    const productOptions = products?.map(product => {
-        return <option key={product._id} value={product}>{product.title}</option>
+const SelectProduct = ({ products, handleProductChange }) => {
+
+    const productOptions = products?.map((product, index) => {
+        return <option key={product._id} value={index}>{product.title}</option>
     })
+    
     return (
-        <select>
+        <select onChange={handleProductChange}>
+            <option defaultValue={""}>Product Title</option>
             {productOptions}
         </select>
     )

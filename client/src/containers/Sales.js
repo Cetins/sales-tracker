@@ -9,8 +9,12 @@ import ProductService from '../services/ProductService';
 const Sales = () => {
     const [sales, setSales] = useState([]);
     const [services, setServices] = useState([]);
+    const [service, setService] = useState();
     const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState();
     const [staff, setStaff] = useState([]);
+    const [staffMember, setStaffMember] = useState();
+    const [date, setDate] = useState();    
 
     useEffect(() => {
         SalesService.getSales()
@@ -29,9 +33,45 @@ const Sales = () => {
             .then(staff => setStaff(staff));
     }, []);
 
+    const handleServiceChange = (e) => {setService(services[e.target.value])}
+    const handleProductChange = (e) => {setProduct(products[e.target.value])}
+    const handleStaffMemberChange = (e) => {setStaffMember(staff[e.target.value])}
+    const handleDateChange = (e) => {setDate(e.target.value)}
+
+    const updateStock = (stockSold) => {
+        const updatedProduct = {...product}
+        updatedProduct.stock -= stockSold
+        setProduct(updatedProduct)
+        ProductService.updateProduct(updatedProduct)
+    } 
+    // const updateStock = (stockSold) => {
+    //     const newStock = product.stock - stockSold
+    //     ProductService.updateProduct({
+    //         stock: newStock})
+    // }
+
+    const addSale = (sale) => {
+        SalesService.addSale(sale);
+        const updatedSales = [...sales, sale]  
+        setSales(updatedSales);
+    }
+
     return (
         <div className="parent-container">
-            <SaleTabs services={services} products={products} staff={staff}/>
+            <SaleTabs 
+                services={services}
+                products={products}
+                staff={staff}
+                staffMember={staffMember}
+                service={service}
+                product={product}
+                date={date}
+                addSale={addSale}
+                updateStock={updateStock}
+                handleServiceChange={handleServiceChange}
+                handleProductChange={handleProductChange}
+                handleStaffMemberChange={handleStaffMemberChange}
+                handleDateChange={handleDateChange} />
             <SalesTable sales={sales}/>
         </div>
     )

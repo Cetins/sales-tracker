@@ -12,36 +12,29 @@
 }
 
 ul.nav {
-    margin: .5em auto 2em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid var(--nav);
-    border-radius: 2em;
+    display: inline-flex;
+    gap: 2em;
+    padding: 1em;
   }
   
 ul.nav li {
-    width: 50%;
     padding: 1em;
     list-style: none;
-    text-align: center;
     font-size: 1.2em;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.7s;
-    border-bottom-left-radius: 2em;
-    border-top-left-radius: 2em;
 }
-ul.nav li:nth-child(2) {
-    border-radius: 0;
-    border-bottom-right-radius: 2em;
-    border-top-right-radius: 2em;
-}
+
 ul.nav li:hover {
     background: var(--nav);
 }
 ul.nav li.active {
     background: var(--accent);
+}
+
+.FirstTab , .SecondTab {
+    margin: 0 1em;
+    padding: 1em;
 }
 
 .FirstTab p,

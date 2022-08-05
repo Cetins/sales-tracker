@@ -13,35 +13,35 @@ db.products.insertMany([
         title: "test product1",
         manufacturer: "company ltd",
         price: 10,
-        sale_price: 10,
+        cost: 10,
         stock: 23
     },
     {
         title: "test product2",
         manufacturer: "company ltd",
         price: 10,
-        sale_price: 10,
+        cost: 10,
         stock: 9
     },
     {
         title: "test product3",
         manufacturer: "company ltd",
         price: 12,
-        sale_price: 10,
+        cost: 10,
         stock: 8
     },
     {
         title: "test product4",
         manufacturer: "company ltd",
         price: 15,
-        sale_price: 10,
+        cost: 10,
         stock: 3
     },
     {
         title: "test product5",
         manufacturer: "company ltd",
         price: 15,
-        sale_price: 10,
+        cost: 10,
         stock: 3
     }
 ])
@@ -92,20 +92,20 @@ db.staff.insertMany([
 db.sales.insertMany([
     {
         category: "service",
-        title: "test service3",
+        title: "test service",
+        service_id: 121212,
         price: 30,
-        staff: "staff 2",
+        staff: "test staff",
         staffId: 1234,
         date: "01/01/2022"
     },
     {
         category: "product",
-        title: "test product5",
-        manufacturer: "company ltd",
+        title: "test product",
+        product_id: 01234567,
         price: 5,
-        sale_price: 10,
-        staff: "staff 1",
-        staffId: 5678,
+        staff: "test staff",
+        staffId: 1234,
         date: "01/01/2022"
     }
 ])

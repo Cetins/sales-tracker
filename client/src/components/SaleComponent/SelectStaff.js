@@ -1,11 +1,13 @@
 import React from "react";
 
-const SelectStaff = ({ staff }) => {
-    const staffOptions = staff.map(member => {
-        return <option key={member._id} value={member}>{member.name}</option>
+const SelectStaff = ({ staff, handleStaffMemberChange }) => {
+
+    const staffOptions = staff.map((member, index) => {
+        return <option key={member._id} value={index}>{member.name}</option>
     })
     return (
-        <select>
+        <select onChange={handleStaffMemberChange} >
+            <option defaultValue="" >Staff Member</option>
             {staffOptions}
         </select>
     )
