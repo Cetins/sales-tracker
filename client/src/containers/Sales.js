@@ -44,11 +44,6 @@ const Sales = () => {
         setProduct(updatedProduct)
         ProductService.updateProduct(updatedProduct)
     } 
-    // const updateStock = (stockSold) => {
-    //     const newStock = product.stock - stockSold
-    //     ProductService.updateProduct({
-    //         stock: newStock})
-    // }
 
     const addSale = (sale) => {
         SalesService.addSale(sale);
