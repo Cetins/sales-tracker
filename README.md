@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Sales Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Small business app
 
-## Available Scripts
 
-In the project directory, you can run:
+<img width="800" alt="Screenshot 2022-09-06 at 22 18 52" src="https://user-images.githubusercontent.com/69481095/188740219-2f4053ff-1a80-4161-ae3d-9c0c18f8c4d6.png">
 
-### `npm start`
+## Technical
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Front-end designed with React, Javascript and vanilla CSS. Back-end designed with Express and MongoDB. On a side note, an SQL database would be more suitable for this data structure but at the time being I was learning MongoDB and would like to practice more. It was an intentional education choice :)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="1404" alt="Screenshot 2022-09-06 at 22 15 37" src="https://user-images.githubusercontent.com/69481095/188744217-a0e38c49-1a23-47a3-81d1-69af37de91cc.png">
 
-### `npm test`
+## Functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This app lets users to add sales in two categories, products and services. Small businesses such as hairdressers and barbers mostly offer both. While service sales easy to store and calculate, product sales may need different mechanics such as stock tracking. In this app when user submit a product sale it updates relevant stock in real time.
 
-### `npm run build`
+<img width="416" alt="Screenshot 2022-09-06 at 22 15 49" src="https://user-images.githubusercontent.com/69481095/188744367-ec34afb1-01c9-4686-b543-6086d1646066.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Upcoming features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I'll be adding commission calculator soon, so users can assign commission percentage to staff members and system could auto calculates the commision per staff.
