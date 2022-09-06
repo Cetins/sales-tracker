@@ -3,8 +3,8 @@ import SubTitle from "./SubTitle"
 import ProductsTable from "./ProductsTable"
 
 const Products = ({ products }) => {
-    const stockTotal = products.reduce((total, sale) => total + sale.price, 0);
-    const stockTitle = `Net Stock Worth is £ ${stockTotal}`
+    const stockTotal = products.reduce((total, sale) => total + sale.cost, 0);
+    const stockTitle = `Net Stock Cost is £ ${stockTotal}`
 
     return (
         <div className="child-container">

@@ -1,0 +1,44 @@
+.Tabs {
+    width: auto;
+    height: auto;
+    /* min-height: 400px; */
+    background: var(--container);
+    margin: 3.5em auto 1.5em;
+    padding: 2em 1em;
+    @media (max-width: 769px) {
+        padding: 2em 0;
+    };
+    box-shadow: var(--shadow);
+}
+
+ul.nav {
+    display: inline-flex;
+    gap: 2em;
+    padding: 1em;
+  }
+  
+ul.nav li {
+    padding: 1em;
+    list-style: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+ul.nav li:hover {
+    background: var(--nav);
+}
+ul.nav li.active {
+    background: var(--accent);
+}
+
+.FirstTab , .SecondTab {
+    margin: 0 1em;
+    padding: 1em;
+}
+
+.FirstTab p,
+.SecondTab p {
+    font-size: 2em;
+    text-align: center;
+}
