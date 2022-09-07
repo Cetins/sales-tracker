@@ -7,8 +7,8 @@ const ProductsTable = ({ products }) => {
             <tr key={item._id}>
                 <td>{item.title}</td>
                 <td>{item.manufacturer}</td>
+                <td>£ {item.cost}</td>
                 <td>£ {item.price}</td>
-                <td>£ {item.sale_price}</td>
                 <td>{item.stock}</td>
             </tr>
         )
@@ -20,7 +20,7 @@ const ProductsTable = ({ products }) => {
                     <tr>
                         <th>Product</th>
                         <th>Manufacturer</th>
-                        <th>Price</th>
+                        <th>Cost</th>
                         <th>Sale Price</th>
                         <th>Stock</th>
                     </tr>

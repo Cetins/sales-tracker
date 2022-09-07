@@ -6,7 +6,7 @@ const ServicesTable = ({ services }) => {
         return (
             <tr key={item._id}>
                 <td>{item.title}</td>
-                <td>{item.duration}</td>
+                <td>{item.duration} mins</td>
                 <td>£ {item.price}</td>
             </tr>
         )

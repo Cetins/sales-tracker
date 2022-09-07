@@ -3,7 +3,7 @@ import SubTitle from "./SubTitle"
 import ProductsTable from "./ProductsTable"
 
 const Products = ({ products }) => {
-    const stockTotal = products.reduce((total, sale) => total + sale.cost, 0);
+    const stockTotal = products.reduce((total, product) => total + (product.cost * product.stock) , 0);
     const stockTitle = `Net Stock Cost is £ ${stockTotal}`
 
     return (
